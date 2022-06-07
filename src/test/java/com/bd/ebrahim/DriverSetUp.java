@@ -9,14 +9,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverSetUp {
 	WebDriver driver;
-	String baseUrl = "https://opensource-demo.orangehrmlive.com";
-
 	@BeforeSuite
 	public void start() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get(baseUrl);
 	}
 
 	@AfterSuite

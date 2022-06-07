@@ -8,9 +8,11 @@ import static org.openqa.selenium.support.locators.RelativeLocator.with;
 import org.testng.annotations.Test;
 
 public class RelativeLocators extends DriverSetUp{	
-
+	String baseUrl = "https://opensource-demo.orangehrmlive.com";
+	
 	@Test
 	public void loginCredentailsGet() throws InterruptedException {
+		driver.get(baseUrl);
 		WebElement loginInformation = driver.findElement(By.id("logInPanelHeading"));
 		WebElement credentails = driver.findElement(RelativeLocator.with(By.tagName("span")).above(loginInformation));
 		System.out.println("/*************************");
@@ -28,5 +30,9 @@ public class RelativeLocators extends DriverSetUp{
 			System.out.println(socialMediaList.getAttribute("alt"));
 		}
 		System.out.println("*************************/");
+		
+		
+		String url =  driver.getCurrentUrl();
+		System.out.println(url);
 	}
 }
