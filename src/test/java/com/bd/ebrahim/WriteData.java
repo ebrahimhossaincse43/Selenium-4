@@ -40,6 +40,7 @@ public class WriteData {
 		String filePath = ".\\dataFiles\\employee.xlsx";
 		FileOutputStream outputStram = new FileOutputStream(filePath);
 		workbook.write(outputStram);
+		outputStram.close();
 		System.out.println("Successfully Write Data on Excel Sheet");
 	}
 
