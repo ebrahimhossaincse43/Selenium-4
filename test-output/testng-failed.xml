@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.bd.ebrahim.Screenshots">
+      <class name="com.bd.ebrahim.ReadingExcelData">
         <methods>
-          <include name="takeWebElementPageSectionScreenshot"/>
-          <include name="tearDown"/>
-          <include name="start"/>
-          <include name="home"/>
+          <include name="ReadExcelData"/>
         </methods>
-      </class> <!-- com.bd.ebrahim.Screenshots -->
+      </class> <!-- com.bd.ebrahim.ReadingExcelData -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
